@@ -1,0 +1,13 @@
+{
+ "service":
+ {
+  "threads": 4,
+  "port": 9999,
+  "coin-key": 2,
+  "token": ""
+ },
+ "server": "https://app.metahash.io/api/metachains/",
+ "system":
+ {
+ }
+}
