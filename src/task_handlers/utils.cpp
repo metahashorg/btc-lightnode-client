@@ -97,8 +97,10 @@ namespace utils
             if (fut.wait_for(m_interval) == std::future_status::timeout)
             {
                 std::lock_guard<std::mutex> guard(m_locker);
-                if (m_handler)
+                if (m_handler) {
                     m_handler();
+                    m_handler = nullptr;
+                }
             }
         });
         m_thr.detach();
